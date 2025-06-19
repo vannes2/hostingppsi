@@ -1,0 +1,304 @@
+/* ========================================== */
+/* DESAIN SISTEM & PALET WARNA                */
+/* ========================================== */
+:root {
+  --color-background: #1f2b38;
+  --color-surface-1: #2c3e50;
+  --color-surface-2: #34495e; /* Digunakan untuk hover */
+  --color-accent-1: #f39c12;
+  --color-accent-2: #e67e22;
+  --color-text-primary: #ecf0f1;
+  --color-text-secondary: #a3b1c2;
+  --color-border: #3d566e;
+  --color-success: #27ae60;
+  --color-warning: #f1c40f;
+  --color-danger: #c0392b;
+  --color-info: #3498db;
+  --font-family: 'Poppins', sans-serif;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --transition-smooth: all 0.2s ease-in-out;
+}
+
+/* ========================================== */
+/* BODY & GLOBAL STYLES                       */
+/* ========================================== */
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+/* ========================================== */
+/* PERBAIKAN UNTUK MEMASTIKAN SCROLL MUNCUL   */
+/* ========================================== */
+.home-admin-container {
+  width: 100%;
+  overflow-x: hidden; /* Mencegah container ini ikut melebar */
+}
+
+/* ========================================== */
+/* DETAIL DATA & HEADER                       */
+/* ========================================== */
+.detail-data {
+  background-color: var(--color-surface-1);
+  padding: 16px 24px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 20px;
+  border: 1px solid var(--color-border);
+}
+
+.detail-data h2 {
+  margin-top: 0;
+  margin-bottom: 4px;
+  color: var(--color-text-primary);
+  font-size: 1.3rem;
+}
+
+.detail-data p {
+  margin: 2px 0;
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+}
+
+/* ========================================== */
+/* SEARCH & TOOLBAR                           */
+/* ========================================== */
+.header-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 350px;
+  padding: 8px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  background: var(--color-surface-2);
+  color: var(--color-text-primary);
+  transition: var(--transition-smooth);
+}
+
+.search-input::placeholder {
+  color: var(--color-text-secondary);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--color-accent-1);
+  box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.4);
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+}
+
+/* ========================================== */
+/* BUTTON STYLES                              */
+/* ========================================== */
+.btn-primary,
+.btn-refresh,
+.btn-view,
+.btn-edit,
+.btn-delete {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--color-accent-1);
+  color: var(--color-background);
+  font-weight: 700;
+}
+.btn-primary:hover {
+  background-color: var(--color-accent-2);
+  transform: translateY(-1px);
+}
+
+.btn-refresh {
+  background-color: var(--color-surface-2);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+}
+.btn-refresh:hover {
+  filter: brightness(1.2);
+  transform: translateY(-1px);
+}
+
+.table-actions .btn-view,
+.table-actions .btn-edit,
+.table-actions .btn-delete {
+  padding: 5px 10px;
+  font-size: 0.75rem;
+}
+
+.btn-view { background-color: var(--color-info); color: #ffffff; }
+.btn-edit { background-color: var(--color-warning); color: var(--color-background); font-weight: 700; }
+.btn-delete { background-color: var(--color-danger); color: #ffffff; }
+
+.btn-view:hover, .btn-edit:hover, .btn-delete:hover {
+    filter: brightness(1.15);
+    transform: translateY(-1px);
+}
+
+/* ========================================== */
+/* TABLE & CONTAINER                          */
+/* ========================================== */
+.table-wrapper {
+  width: 100%;
+  background: var(--color-surface-1);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.table-scroll {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.table-scroll::-webkit-scrollbar { height: 10px; }
+.table-scroll::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 5px; }
+.table-scroll::-webkit-scrollbar-thumb:hover { background: var(--color-surface-2); }
+.table-scroll::-webkit-scrollbar-track { background: var(--color-background); border-radius: 5px; }
+
+.table-scroll table {
+  width: 100%;
+  min-width: 2200px; 
+  border-collapse: collapse;
+}
+
+.table-scroll th,
+.table-scroll td {
+  padding: 10px 12px;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  vertical-align: middle;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.table-scroll th {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: var(--color-surface-2);
+  color: var(--color-text-secondary);
+}
+
+.table-scroll tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table-scroll tbody tr {
+  background-color: var(--color-surface-1);
+  transition: var(--transition-smooth);
+}
+.table-scroll tbody tr:nth-child(even) {
+  background-color: var(--color-background);
+}
+.table-scroll tbody tr:hover {
+  background-color: var(--color-surface-2);
+}
+
+.table-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* ========================================== */
+/* PEWARNAAN TEXT KOLOM SPESIFIK              */
+/* ========================================== */
+.table-scroll td:nth-child(1) {
+  color: var(--color-text-secondary);
+  font-weight: bold;
+}
+.table-scroll td:nth-child(2) {
+  color: var(--color-accent-1);
+  font-weight: 600;
+}
+.table-scroll td:nth-child(7) {
+  color: var(--color-info);
+}
+.table-scroll td:nth-child(9) {
+  color: var(--color-warning);
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .header-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .toolbar {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: none;
+  }
+
+  .detail-data {
+    padding: 1rem;
+  }
+
+  .detail-data h2 {
+    font-size: 1.1rem;
+  }
+
+  .detail-data p {
+    font-size: 0.8rem;
+  }
+
+  .btn-primary,
+  .btn-refresh,
+  .btn-view,
+  .btn-edit,
+  .btn-delete {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+
+  .table-scroll table {
+    min-width: 1000px; /* Kurangi min-width agar tidak terlalu besar */
+  }
+
+  .table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table-wrapper {
+    padding: 1rem;
+  }
+}

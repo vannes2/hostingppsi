@@ -1,0 +1,251 @@
+/* ======== SignUp.css ======== */
+
+/* ========== Font lama ==============*/
+/* font-family: "Segoe UI", sans-serif; */
+
+.signup-page {
+ 
+  color: #3b3b3b; /* Abu-abu gelap untuk teks */
+  background-color: #fefff0; /* Background putih kekuningan */
+  padding-bottom: 50px;
+}
+
+.signup-title h1 {
+  text-align: center;
+  font-size: 42px; /* Lebih besar */
+  margin-top: 40px;
+  color: #000000; /* Merah gelap */
+  text-transform: uppercase; /* Huruf kapital semua */
+  letter-spacing: 1px;
+}
+
+.signup-page .container {
+  width: 60%;
+  margin: 30px auto;
+  background-color: #fefff0; /* Putih kekuningan */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 228, 228, 0.2); /* Merah gelap transparan */
+}
+
+.signup-page label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #3b3b3b;
+}
+
+.signup-page input,
+.signup-page select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc; /* Abu-abu muda */
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #fff; /* Putih */
+  color: #3b3b3b;
+}
+
+.signup-page input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  margin-top: 3px;
+  accent-color: #B31312; /* Warna checkbox sesuai tema */
+}
+
+.signup-page .form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.signup-page .form-column {
+  flex: 1;
+}
+
+.signup-page .checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.signup-page .terms {
+  font-size: 14px;
+  color: #666; /* Abu-abu sedang */
+}
+
+.signup-page .terms a {
+  color: #B31312; /* Merah gelap */
+  text-decoration: underline;
+}
+
+.signup-page .terms a:hover {
+  color: #ffc6c6; /* Merah muda muda saat hover */
+}
+
+.signup-page .btn {
+  width: 100%;
+  background-color: #B31312; /* Merah gelap */
+  color: white;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-page .btn:hover {
+  background-color: #a00e0e; /* Versi lebih gelap dari merah gelap */
+}
+
+.footer-separator {
+  width: 100%;
+  height: 8px;
+  background-color: #B31312; /* Merah gelap */
+}
+
+.signup-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;  /* Atur jarak antar elemen form */
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #000;
+}
+
+
+/* ======= POPUP SUCCESS ======= */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(60, 60, 60, 0.3); /* transparan gelap */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background-color: #fffaf0; /* krem / putih kekuningan */
+  padding: 30px 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-content .checkmark {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px auto;
+  border-radius: 50%;
+  background-color: #4CAF50; /* Hijau sukses */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.popup-content p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+
+.popup-content.error {
+  background-color: #fff7f5;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.error-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #f44336; /* Merah terang */
+  color: white;              /* Warna X putih */
+  font-size: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px auto;
+  font-weight: bold;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ========== Responsive Breakpoints ========== */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .signup-page .container {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .signup-title h1 {
+    font-size: 32px;
+  }
+
+  .signup-page .form-row {
+    display: block;
+  }
+
+  .signup-page .btn {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .signup-title h1 {
+    font-size: 26px;
+  }
+
+  .signup-page .container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .signup-page input,
+  .signup-page select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .signup-page .btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .signup-page .terms {
+    font-size: 12px;
+  }
+
+  .signup-page input[type="checkbox"] {
+    width: 12px;
+    height: 12px;
+  }
+}

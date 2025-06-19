@@ -1,0 +1,148 @@
+/* ==========================================================================
+   Sidebar Admin - VERSI FINAL DENGAN UI DISEMPURNAKAN
+   ========================================================================== */
+
+/* --- Variabel Global --- */
+:root {
+    --sidebar-bg: #111827; /* Dibuat lebih gelap */
+    --sidebar-bg-lighter: #1f2937;
+    --sidebar-text-color: #9ca3af;
+    --sidebar-text-hover: #ffffff;
+    --accent-color: #f59e0b; /* Orange/Amber yang lebih cerah */
+    --border-color: #374151;
+    --link-active-bg: #374151;
+    --sidebar-width: 260px;
+    --sidebar-width-collapsed: 88px;
+    --transition-speed: 0.3s;
+    --transition-ease: ease-in-out;
+}
+
+/* --- Container Utama Sidebar --- */
+.sidebar {
+    width: var(--sidebar-width); height: 100vh; background-color: var(--sidebar-bg);
+    color: var(--sidebar-text-color); display: flex; flex-direction: column;
+    flex-shrink: 0; position: sticky; top: 0;
+    transition: width var(--transition-speed) var(--transition-ease);
+    z-index: 1010;
+    border-right: 1px solid var(--border-color);
+}
+.sidebar.collapsed { width: var(--sidebar-width-collapsed); }
+
+/* --- [PERBAIKAN] Brand/Logo & Tombol Toggle Atas --- */
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    height: 70px;
+    flex-shrink: 0;
+}
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+.logo-img { height: 36px; }
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--sidebar-text-hover);
+    white-space: nowrap;
+}
+.sidebar-toggle {
+    background: none; border: none; color: var(--sidebar-text-color);
+    padding: 0.5rem; border-radius: 6px; display: flex;
+    cursor: pointer; font-size: 1.5rem;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    
+}
+.sidebar-toggle:hover {
+    background-color: var(--sidebar-bg-lighter);
+    color: var(--sidebar-text-hover);
+}
+
+/* --- Navigasi & Profil --- */
+.sidebar-nav { flex-grow: 1; overflow-y: auto; overflow-x: hidden; }
+.sidebar-nav ul { list-style: none; padding: 0 1rem; margin: 0; display: flex; flex-direction: column; }
+.nav-item-profile { padding: 1rem 0; }
+.profile-link {
+    display: flex; align-items: center; gap: 1rem;
+    text-decoration: none; color: inherit;
+    background-color: var(--sidebar-bg-lighter);
+    padding: 0.75rem;
+    border-radius: 8px;
+    transition: box-shadow 0.2s ease;
+}
+.profile-link:hover { box-shadow: 0 0 15px rgba(245, 158, 11, 0.2); }
+.sidebar.collapsed .profile-link { justify-content: center; padding: 0.5rem; }
+.profile-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.profile-info { overflow: hidden; }
+.sidebar.collapsed .profile-info { display: none; }
+.profile-nama { font-weight: 600; color: var(--sidebar-text-hover); white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+.profile-email { font-size: 0.8rem; color: var(--sidebar-text-color); white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+
+.nav-separator { height: 1px; background-color: var(--border-color); margin: 1rem 0; }
+
+/* --- Item Menu & Submenu --- */
+.nav-item { position: relative; margin-bottom: 0.25rem; }
+.nav-link, .submenu-toggle {
+    display: flex; align-items: center; padding: 0.8rem 1rem;
+    color: var(--sidebar-text-color); text-decoration: none; border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    white-space: nowrap; font-weight: 500; width: 100%;
+    position: relative;
+}
+.submenu-toggle { background: none; border: none; cursor: pointer; text-align: left; }
+.sidebar.collapsed .nav-link, .sidebar.collapsed .submenu-toggle { justify-content: center; }
+.nav-link:hover, .submenu-toggle:hover { background-color: var(--sidebar-bg-lighter); color: var(--sidebar-text-hover); }
+
+/* [PERBAIKAN] Gaya item aktif yang baru */
+.nav-link.nav-active, .nav-item.nav-active > .submenu-toggle {
+    background-color: var(--link-active-bg);
+    color: var(--sidebar-text-hover);
+}
+.nav-link.nav-active::before, .nav-item.nav-active > .submenu-toggle::before {
+    content: ''; position: absolute; left: 0; top: 20%;
+    height: 60%; width: 4px; background-color: var(--accent-color);
+    border-radius: 0 4px 4px 0;
+}
+.sidebar.collapsed .nav-link.nav-active, .sidebar.collapsed .nav-item.nav-active > .submenu-toggle {
+    background: linear-gradient(90deg, var(--accent-color) 0%, var(--sidebar-bg) 20%);
+}
+.sidebar.collapsed .nav-link.nav-active::before, .sidebar.collapsed .nav-item.nav-active > .submenu-toggle::before { display: none; }
+
+
+.icon-spacing { font-size: 1.4rem; margin-right: 1rem; flex-shrink: 0; }
+.sidebar.collapsed .icon-spacing { margin-right: 0; font-size: 1.6rem; }
+.sidebar.collapsed span { display: none; }
+
+.submenu-toggle { justify-content: space-between; }
+.submenu-arrow { font-size: 1.2rem; transition: transform 0.2s ease; }
+.submenu-toggle.open .submenu-arrow { transform: rotate(90deg); }
+
+.submenu-list { /* Kembali ke sistem accordion yang aman */
+    list-style: none; padding: 0; margin: 0.25rem 0 0 0;
+    background-color: rgba(0,0,0,0.2); border-radius: 8px;
+    overflow: hidden; max-height: 0;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+}
+.nav-item.submenu-open .submenu-list { max-height: 500px; padding: 0.5rem 0; }
+
+.submenu-list li a { padding: 0.6rem 1rem 0.6rem 3.5rem; font-size: 0.9em; display: block; color: var(--sidebar-text-color); }
+.submenu-list li a:hover { color: var(--sidebar-text-hover); }
+.submenu-list li.submenu-active a { color: var(--accent-color); font-weight: 600; }
+
+/* Tombol toggle saat sidebar diciutkan */
+.sidebar-toggle-collapsed {
+    background: none; border: none; color: var(--sidebar-text-color);
+    padding: 1rem 0; cursor: pointer; font-size: 1.5rem;
+    margin-top: auto;
+}
+.sidebar-toggle-collapsed:hover { color: var(--sidebar-text-hover); }
+
+/* --- Mobile --- */
+.mobile-hamburger, .overlay { display: none; }
+@media (max-width: 768px) {
+    /* ... (Aturan mobile sama seperti sebelumnya) ... */
+}

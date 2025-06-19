@@ -1,0 +1,194 @@
+/* Kontainer utama khusus halaman Konsultasi */
+.konsultasi-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fefff0;
+}
+
+/* Section Advokat + Search */
+.advokat-section {
+    padding: 20px;
+    background-color: #fefff0;
+}
+
+/* Header dengan judul & search */
+.advokat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.product-title {
+    font-size: 24px;
+    color: #B31312;
+    font-weight: bold;
+}
+
+.search-filter-container {
+    display: flex;
+    gap: 15px;
+}
+
+.search-filter-container .search-input,
+.search-filter-container .filter-select {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #B31312;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+
+.filter-select {
+    width: 200px;
+    cursor: pointer;
+}
+
+/* Daftar Pengacara */
+.konsultasi-page .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;  /* Jarak antar card */
+    padding: 20px;
+}
+
+/* Card Pengacara */
+.konsultasi-page .product-item {
+    background-color: white;
+    border-radius: 12px; /* Border radius dari Home */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Shadow dari Home */
+    padding: 20px;
+    text-align: center;
+    width: 250px; /* Lebar card disamakan dengan Home */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.konsultasi-page .product-item:hover {
+    transform: translateY(-5px); /* Hover effect dari Home */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Container dan Gambar Pengacara Persegi Panjang */
+.foto-advokat-container {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 160px;
+    height: 200px;
+    margin: 0 auto 12px;
+    display: block;
+}
+
+.konsultasi-page .product-item img.foto-advokat {
+    width: 160px;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto 12px;
+}
+
+/* Jika ingin indikator online, bisa pakai style ini */
+
+.online-indicator {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 16px;
+    height: 16px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.7);
+    box-shadow: 0 0 6px #4CAF50;
+    pointer-events: none;
+    z-index: 10;
+}
+
+
+/* Button di dalam card pengacara dengan GRADASI */
+.konsultasi-page .btn-konsultasi {
+    margin-top: 15px;
+    background: linear-gradient(to right, #b31217, #e52d27);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.konsultasi-page .btn-konsultasi:hover {
+    background: white;
+    color: #B31312;
+    border: 2px solid #B31312;
+}
+
+/* Teks dalam Card */
+.konsultasi-page .product-item p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Footer */
+.konsultasi-page .footer-separator {
+    width: 100%;
+    height: 10px;
+    background-color: #B31312;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0 14px;
+  font-size: 22px;
+  gap: 4px;
+}
+
+.star {
+  color: #f39c12;
+}
+
+.star.empty {
+  color: #ccc;
+}
+
+.rating-number {
+  margin-left: 6px;
+  color: #555;
+  font-size: 16px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .advokat-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .search-filter-container .search-input,
+    .search-filter-container .filter-select {
+        width: 48%;
+        margin-top: 10px;
+    }
+
+    .konsultasi-page .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .konsultasi-page .product-item {
+        width: 80%;
+    }
+}

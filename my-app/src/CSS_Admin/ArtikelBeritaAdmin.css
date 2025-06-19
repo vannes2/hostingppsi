@@ -1,0 +1,298 @@
+/* ==============================================
+   CSS HALAMAN ADMIN BERITA - TEMA GELAP
+   ============================================== */
+
+/* ===== 1. LAYOUT UTAMA ===== */
+.admin-page-layout {
+  display: flex;
+  background-color: var(--color-background); /* [THEME] Latar belakang utama */
+  min-height: 100vh;
+  font-family: var(--font-family); /* [THEME] Font konsisten */
+}
+
+.admin-berita-container {
+  flex: 1;
+  padding: 2rem 3rem;
+  background-color: var(--color-background); /* [THEME] Latar container */
+}
+
+.admin-berita-container h2 {
+  font-size: 1.5rem; /* Disesuaikan */
+  color: var(--color-text-secondary); /* [THEME] Warna judul */
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--color-border); /* [THEME] Border */
+  padding-bottom: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-and-top-preview {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* ===== 2. FORMULIR INPUT BERITA ===== */
+#admin-artikel-berita form {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 25px;
+  border-radius: var(--radius-main);
+  background-color: var(--color-surface); /* [THEME] Latar form */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#admin-artikel-berita form label {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+#admin-artikel-berita form input[type="text"],
+#admin-artikel-berita form textarea,
+#admin-artikel-berita form input[type="file"] {
+  padding: 10px 12px;
+  border: 1px solid var(--color-border); /* [THEME] Border input */
+  background-color: var(--color-background); /* [THEME] Latar input */
+  color: var(--color-text-primary); /* [THEME] Warna teks input */
+  border-radius: var(--radius-main);
+  font-size: 14px;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+#admin-artikel-berita form input[type="text"]:focus,
+#admin-artikel-berita form textarea:focus {
+    border-color: var(--color-accent-orange); /* [THEME] Highlight saat aktif */
+    outline: none;
+}
+
+#admin-artikel-berita form textarea {
+  min-height: 100px;
+}
+
+#admin-artikel-berita form button {
+  background-color: var(--color-accent-orange); /* [THEME] Tombol utama */
+  color: var(--color-background);
+  font-weight: 600;
+  padding: 12px;
+  font-size: 15px;
+  border: none;
+  border-radius: var(--radius-main);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#admin-artikel-berita form button:hover {
+  background-color: #d1860f; /* Varian hover lebih gelap */
+}
+
+/* ===== 3. PREVIEW BERITA TOP ===== */
+.top-preview-container {
+  width: 35%;
+  padding: 20px;
+  background-color: var(--color-surface); /* [THEME] Latar */
+  border-radius: var(--radius-main);
+  height: fit-content;
+}
+
+.top-preview-container h3 {
+  margin-top: 0;
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: var(--color-text-primary); /* [THEME] Warna teks */
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 10px;
+}
+
+.top-preview-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.top-preview-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.top-checkbox {
+  width: 18px;
+  height: 18px;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+
+/* ===== 4. DAFTAR ARTIKEL BERITA ===== */
+.berita-list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 500px; /* Sesuaikan jika perlu */
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Tombol Tambah Card */
+.tambah-card {
+  order: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border: 2px dashed var(--color-border); /* [THEME] Border */
+  border-radius: var(--radius-main);
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tambah-card:hover {
+  background-color: rgba(255, 255, 255, 0.05); /* [THEME] Efek hover */
+  border-color: var(--color-text-secondary);
+}
+
+.tambah-content {
+  text-align: center;
+  color: var(--color-text-secondary); /* [THEME] Warna teks */
+  font-size: 16px;
+}
+
+.plus-icon {
+  font-size: 38px;
+  font-weight: bold;
+  color: var(--color-danger); /* [THEME] Warna ikon plus */
+  margin-bottom: 4px;
+}
+
+/* Setiap Item Kartu Berita */
+.berita-item {
+  display: flex;
+  background-color: var(--color-surface); /* [THEME] Latar kartu */
+  border: 1px solid var(--color-border); /* [THEME] Border kartu */
+  border-radius: var(--radius-main);
+  padding: 15px;
+  gap: 20px;
+  align-items: flex-start;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.berita-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.berita-item img {
+  width: 120px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--color-border); /* [THEME] Border gambar */
+}
+
+.berita-item h4 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--color-accent-orange); /* [THEME] Warna judul berita */
+}
+
+.berita-item p {
+  margin: 6px 0 10px;
+  color: var(--color-text-secondary); /* [THEME] Warna teks deskripsi */
+  font-size: 14px;
+  max-width: 500px;
+}
+
+.berita-item .actions button {
+  background-color: var(--color-view); /* [THEME] Tombol Edit */
+  color: var(--color-text-primary);
+  border: none;
+  padding: 6px 12px;
+  margin-right: 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.berita-item .actions button:hover {
+  filter: brightness(120%);
+}
+
+.berita-item .actions button.delete-btn {
+  background-color: var(--color-danger); /* [THEME] Tombol Hapus */
+}
+
+
+/* ===== 5. RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .admin-berita-container {
+    padding: 1.5rem 2rem;
+  }
+
+  .form-and-top-preview {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  #admin-artikel-berita form,
+  .top-preview-container {
+    width: 100%;
+  }
+
+  #admin-artikel-berita form {
+    padding: 20px;
+  }
+
+  #admin-artikel-berita form button {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .top-preview-item {
+    font-size: 0.85rem;
+    gap: 10px;
+  }
+
+  .top-preview-item img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .berita-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .berita-item img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .berita-item h4 {
+    font-size: 1rem;
+  }
+
+  .berita-item p {
+    font-size: 13px;
+    max-width: 90%;
+  }
+
+  .berita-item .actions button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}

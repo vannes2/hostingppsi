@@ -1,0 +1,161 @@
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Wrapper to force full width */
+.footer-wrapper {
+    width: 100%;
+    background-color: #fefff0;
+}
+
+/* Footer Background (penuh layar) */
+.footer-background {
+    width: 100%;
+    background-color: #fefff0;
+    padding: 40px 0;
+}
+
+/* Container content tetap tengah dan max width */
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Logo */
+.footer-logo {
+    text-align: left;
+}
+
+.footer-logo img {
+    width: 140px;
+    margin-top: 5px;
+}
+
+/* Main content area */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.customer-care,
+.account,
+.social-media {
+    flex: 1;
+    min-width: 250px;
+    max-width: 100%;
+}
+
+.customer-care h3,
+.account h3,
+.social-media h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.customer-care p,
+.account p,
+.social-media p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Link Styling */
+.account a,
+.social-media a {
+    color: #3b3b3b;
+    text-decoration: none;
+}
+
+.account a:hover,
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+/* Social media icon styling */
+.social-icons a {
+    margin-right: 10px;
+    color: black; /* Atau warna yang kamu inginkan */
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: gray; /* Warna saat hover */
+}
+
+
+/* Footer Bottom */
+.footer-bottom {
+    width: 100%;
+    background-color: #fefff0;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 13px;
+    color: #777;
+}
+
+/* ============================ */
+/* === RESPONSIVE BREAKPOINTS === */
+/* ============================ */
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 0 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .footer-logo {
+        text-align: center;
+    }
+
+    .customer-care,
+    .account,
+    .social-media {
+        width: 100%;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo img {
+        width: 120px;
+    }
+
+    .footer-container {
+        padding: 0 15px;
+    }
+
+    .customer-care h3,
+    .account h3,
+    .social-media h3 {
+        font-size: 15px;
+    }
+
+    .customer-care p,
+    .account p,
+    .social-media p {
+        font-size: 13px;
+    }
+
+    .footer-bottom {
+        font-size: 11px;
+    }
+}

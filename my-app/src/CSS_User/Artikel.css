@@ -1,0 +1,504 @@
+/* =================== WRAPPER UTAMA KONTEN ARTIKEL =================== */
+.artikel-page {
+  background-color: #fffef0;
+  padding-top: 100px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* =================== WRAPPER UTAMA ARTIKEL SCROLL =================== */
+.artikel-scroll-wrapper {
+  width: 80%; /* diperbesar dari 60% */
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  max-height: 600px;
+  margin-bottom: 150px;
+  background-color: #fffef0;
+  transition: box-shadow 0.3s ease;
+  box-shadow: none !important; /* shadow halus */
+}
+
+
+.artikel-scroll-inner {
+  overflow-y: auto;
+  max-height: 600px;
+  scrollbar-width: thin;
+  scrollbar-color: #c90c0c #f0eede;
+}
+.artikel-scroll-inner::-webkit-scrollbar {
+  width: 8px;
+}
+.artikel-scroll-inner::-webkit-scrollbar-track {
+  background: #f0eede;
+  border-radius: 8px;
+}
+.artikel-scroll-inner::-webkit-scrollbar-thumb {
+  background-color: #c90c0c;
+  border-radius: 8px;
+  border: 2px solid #f0eede;
+}
+
+/* ==================== TABEL ==================== */
+.artikel-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  border-radius: 16px;
+  background-color: transparent;
+  table-layout: fixed;
+  word-wrap: break-word;
+  font-size: 16px;
+}
+
+/* =================== HEADER TABEL =================== */
+.artikel-th {
+  border: 1px solid #ccc;
+  padding: 1.25rem 2rem;
+  text-align: left;
+  background-color: #fff;
+  font-weight: 700;
+  color: #B31312;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-sizing: border-box;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  user-select: none;
+}
+.artikel-th-rounded {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* =================== ISI TABEL =================== */
+.artikel-td {
+  border: 1px solid #ddd;
+  padding: 2rem 2rem;
+  text-align: left;
+  vertical-align: top;
+  background-color: transparent;
+  color: #555;
+  transition: background-color 0.3s ease;
+}
+.artikel-td-rounded {
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+/* =================== WARNA SELANG-SELANG BARIS =================== */
+.artikel-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+.artikel-table tbody tr:nth-child(even) {
+  background-color: #fff6f6;
+}
+
+/* =================== HOVER BARIS =================== */
+.artikel-tr-hover:hover {
+  background-color: #ffe3e3;
+  cursor: pointer;
+}
+
+/* =================== ISI TEXT =================== */
+.artikel-judul {
+  font-weight: 800;
+  margin-bottom: 0.7rem;
+  color: #B31312;
+  font-size: 22px;
+  line-height: 1.2;
+}
+.artikel-deskripsi {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+/* =================== BTN =================== */
+.artikel-download-btn {
+  background: linear-gradient(90deg, #c90c0c 0%, #e52d27 100%);
+  color: white;
+  font-weight: 700;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(197, 15, 15, 0.4);
+  user-select: none;
+}
+.artikel-download-btn:hover {
+  background: #fff;
+  color: #c90c0c;
+  border: 2px solid #c90c0c;
+  box-shadow: none;
+}
+
+/* =================== WARNA PAGE =================== */
+.artikel-filter-row {
+  background-color: #fffef0;
+  padding: 1rem 2rem;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+/* =================== Search Input di dalam Header Tabel =================== */
+.artikel-th-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.artikel-th-title {
+  font-weight: 700;
+  color: #B31312;
+  font-size: 18px;
+  flex: 1;
+  min-width: 150px;
+  user-select: none;
+}
+.artikel-filter-input-inline {
+  padding: 8px 14px;
+  font-size: 15px;
+  border-radius: 25px;
+  border: 1.5px solid #ccc;
+  outline: none;
+  background-color: #fffefb;
+  width: 180px;
+  max-width: 220px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+.artikel-filter-input-inline:focus {
+  border-color: #B31312;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(179, 19, 18, 0.6);
+}
+
+/* =================== KOTAK TAHUN & TANGGAL =================== */
+.artikel-tanggal-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.tahun-box {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #e5e5e5;
+  color: #333;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  font-weight: 700;
+  min-width: 65px;
+  text-align: center;
+  user-select: none;
+}
+
+.tanggal-box {
+  font-size: 15px;
+  color: #B31312;
+  font-weight: 700;
+  background-color: #ffecec;
+  padding: 8px 18px;
+  border-radius: 10px;
+  border: 1px solid #f3a5a5;
+  box-shadow: 0 0 8px rgba(179, 19, 18, 0.4);
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* =================== JENIS HUKUM + TANGGAL DALAM 1 BARIS =================== */
+.artikel-info-horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* =================== JUDUL TANPA GARIS & BOLD =================== */
+.artikel-judul-link {
+  color: #000 !important;
+  font-weight: 800;
+  font-size: 22px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.artikel-judul-link:hover {
+  color: #B31312;
+  text-decoration: underline;
+}
+
+/* KonsultasiCard.css */
+.konsultasi-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid #ddd;
+  transition: box-shadow 0.3s ease;
+}
+
+.konsultasi-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.konsultasi-header {
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.konsultasi-nama {
+  font-size: 22px;
+  color: #B31312;
+  margin: 0;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.konsultasi-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.detail-label {
+  font-weight: 700;
+  color: #555;
+  font-size: 16px;
+}
+
+.detail-value {
+  font-weight: 400;
+  color: #333;
+  font-size: 16px;
+}
+
+.status-badge {
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: capitalize;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  user-select: none;
+}
+
+.status-badge.aktif {
+  background: linear-gradient(90deg, #e8f5e9 0%, #c8e6c9 100%);
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.divider {
+  height: 1px;
+  background-color: #f3a5a5;
+  margin: 1.5rem 0;
+  border: none;
+  box-shadow: 0 1px 2px rgba(179, 19, 18, 0.1);
+}
+
+.history-title {
+  font-size: 18px;
+  color: #B31312;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .konsultasi-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+  
+  .konsultasi-nama {
+    font-size: 20px;
+  }
+  
+  .detail-label,
+  .detail-value {
+    font-size: 15px;
+  }
+  
+  .status-badge {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .konsultasi-card {
+    padding: 1.25rem;
+    border-radius: 10px;
+  }
+  
+  .konsultasi-nama {
+    font-size: 18px;
+  }
+  
+  .detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .history-title {
+    font-size: 16px;
+  }
+}
+
+/* =================== RESPONSIVE =================== */
+@media (max-width: 1280px) {
+  .artikel-scroll-wrapper {
+    width: 90%;
+    max-height: 550px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .artikel-scroll-wrapper {
+    width: 95%;
+    max-height: 480px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 120px;
+  }
+  .artikel-scroll-inner {
+    max-height: 480px;
+    overflow-x: scroll;
+  }
+  .artikel-table {
+    table-layout: auto;
+  }
+  .artikel-th {
+    font-size: 16px;
+    padding: 1rem 1.25rem;
+  }
+  .artikel-td {
+    font-size: 15px;
+    padding: 1.25rem 1.5rem;
+  }
+  .artikel-judul {
+    font-size: 20px;
+  }
+  .artikel-deskripsi {
+    font-size: 14px;
+  }
+  .artikel-download-btn {
+    padding: 10px 24px;
+    font-size: 15px;
+  }
+  .artikel-filter-input-inline,
+  .artikel-dropdown {
+    width: 100%;
+    max-width: none;
+    font-size: 14px;
+  }
+  .artikel-th-flex {
+    justify-content: flex-start;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .artikel-scroll-wrapper {
+    width: 100%;
+    max-height: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 100px;
+  }
+  .artikel-th {
+    padding: 0.75rem 1rem;
+  }
+  .artikel-td {
+    padding: 1rem 1rem;
+  }
+  .artikel-judul {
+    font-size: 18px;
+  }
+  .artikel-deskripsi {
+    font-size: 13px;
+  }
+  .artikel-download-btn {
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+  .artikel-filter-input-inline {
+    width: 100%;
+    max-width: none;
+  }
+  .artikel-th-flex {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .artikel-scroll-wrapper {
+    width: 100%;
+    margin: 0 10px;
+    max-height: 320px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 80px;
+  }
+  .artikel-th {
+    font-size: 14px;
+    padding: 0.5rem 0.75rem;
+  }
+  .artikel-td {
+    font-size: 13px;
+    padding: 0.6rem 0.75rem;
+  }
+  .artikel-judul {
+    font-size: 16px;
+  }
+  .artikel-deskripsi {
+    font-size: 12px;
+  }
+  .artikel-download-btn {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+  .artikel-filter-input-inline,
+  .artikel-dropdown {
+    width: 100%;
+    max-width: none;
+    font-size: 13px;
+  }
+  .artikel-th-flex {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+}

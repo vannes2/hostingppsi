@@ -1,0 +1,895 @@
+/* Reset and font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #fefde9;
+  color: #333;
+}
+
+/* ================= Header Buttons ================= */
+
+.advokat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 15px;
+  flex-wrap: wrap;
+}
+
+.advokat-heading {
+  font-size: 26px;
+  font-weight: 800;
+  color: #102a43;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  position: relative;
+}
+
+.advokat-heading::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 5px;
+  background-color: #B31312;
+  margin-top: 5px;
+  border-radius: 3px;
+}
+
+.advokat-foto-container {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.advokat-nama {
+  font-weight: 700;
+  font-size: 16px;
+  color: #B31312;
+  margin-bottom: 10px;
+}
+
+/* ================= Hero Section ================= */
+.home-before-page .hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, white 0%, #fff5d6 72%, white 100%);
+  padding: 60px 10%;
+  flex-wrap: wrap;
+}
+
+.home-before-page .hero-text {
+  flex: 1;
+  min-width: 280px;
+  text-align: left;
+}
+
+.home-before-page .hero-text h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #3b3b3b;
+  text-align: left;
+}
+
+.home-before-page .hero-text p {
+  margin: 20px 0;
+  color: #666;
+  font-size: 16px;
+}
+
+.home-before-page .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Tombol di Hero Section dengan Gradasi */
+.home-before-page .buttons button {
+  background: linear-gradient(to right, #b31217, #e52d27);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.home-before-page .buttons button:hover {
+  background: white;
+  color: #B31312;
+  border: 2px solid #B31312;
+}
+
+.home-before-page .hero-image {
+  flex: 1;
+  text-align: center;
+  min-width: 280px;
+}
+
+.home-before-page .hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ================= Produk Section ================= */
+.home-before-page .products {
+  background: linear-gradient(180deg, #fff, #fefde9);
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.home-before-page .product-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.home-before-page .product-title {
+  font-size: 24px;
+  text-align: left;
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Scroll Horizontal */
+.home-before-page .product-list {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+
+.home-before-page .product-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.home-before-page .product-item p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Button Klik Konsultasi dengan Gradasi */
+.home-before-page .btn-konsultasi {
+  margin-top: 6px; /* reduce from 15px to bring it closer to the rating */
+  padding: 0.5rem 1rem;
+  background: linear-gradient(to right, #b31217, #e52d27);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.home-before-page .btn-konsultasi:hover {
+  background: white;
+  color: #B31312;
+  border: 2px solid #B31312;
+}
+
+/* ================= Footer Separator ================= */
+.home-before-page .footer-separator {
+  width: 100%;
+  height: 10px;
+  background-color: #B31312;
+}
+
+/* ================= Topik Hukum ================= */
+.topik-hukum {
+    background: linear-gradient(to right, #fff, #fefde9, #fff);
+  text-align: center;
+  padding: 60px 10%;
+  margin: 0;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.topik-hukum h2 {
+  font-size: 28px; /* Increased heading size */
+  margin-bottom: 30px; /* Increased margin */
+  color: #333;
+}
+
+.topik-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;      /* Center the icons vertically */
+  flex-wrap: nowrap;        /* Prevent wrapping */
+  gap: 30px;                /* Space between icons */
+  padding-bottom: 20px;
+  overflow-x: auto;         /* Enable horizontal scroll */
+  scroll-behavior: smooth;  /* Smooth scrolling effect */
+  -webkit-overflow-scrolling: touch;  /* Enable smooth scrolling on iOS */
+  width: 100%;              /* Ensure the container takes full width */
+}
+
+.topik-icon {
+  text-align: center;
+  margin: 0 20px;  /* Jarak antar icon */
+  min-width: 150px; /* Ukuran minimum */
+  max-width: 150px; /* Ukuran maksimum */
+  height: 150px;    /* Setel tinggi tetap */
+  flex-shrink: 0;    /* Mencegah penyusutan elemen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.topik-icon i {
+  font-size: 60px;   /* Icon size */
+  color: #5f5ce2;
+  margin-bottom: 10px; /* Space between icon and text */
+}
+
+.topik-icon img {
+  width: 80px;       /* Ukuran gambar tetap */
+  height: 80px;      /* Ukuran gambar tetap */
+  margin-bottom: 10px;
+  object-fit: contain;  /* Space between image and text */
+}
+
+.topik-icon p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 5px; /* Menjaga jarak antara ikon dan teks */
+  line-height: 1.5;
+}
+
+.rating-stars {
+  text-align: center;
+  margin: 6px 0 4px; /* tighter vertical space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.star {
+  font-size: 24px;
+  margin-right: 2px;
+  transition: transform 0.2s ease;
+}
+
+.star.full {
+  color: #f39c12;
+}
+
+.star.half {
+  color: #f39c12;
+}
+
+.star.empty {
+  color: #ccc;
+}
+
+.star:hover {
+  transform: scale(1.1);
+}
+
+.rating-number {
+  margin-left: 6px;
+  color: #777;
+  font-size: 16px;
+}
+
+.star {
+  font-size: 24px;
+}
+
+.star.full {
+  color: #f39c12;
+}
+
+.star.half {
+  color: #f39c12; /* Optional: create a custom half-star icon instead */
+}
+
+.star.empty {
+  color: #ccc;
+}
+
+.rating-number {
+  margin-left: 6px;
+  color: #777;
+  font-size: 16px;
+}
+
+
+/* ======================= RESPONSIVE ======================= */
+@media (max-width: 1024px) {
+  .topik-icons {
+    justify-content: center;  /* Center icons for smaller screens */
+    gap: 25px;                /* Slightly smaller gap on smaller screens */
+  }
+
+  .topik-icon {
+    min-width: 150px;         /* Adjusted size for smaller screens */
+  }
+
+  .topik-icon i {
+    font-size: 50px;          /* Decreased icon size on smaller screens */
+  }
+
+  .topik-icon img {
+    width: 70px;              /* Smaller image size for mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .topik-hukum h2 {
+    font-size: 24px; /* Decreased heading size for smaller screens */
+  }
+
+  .topik-icons {
+    justify-content: flex-start; /* Keep icons aligned to the left */
+    gap: 15px;             /* Smaller gap between icons */
+    padding-left: 10px;    /* Add padding on the left for a neat look */
+  }
+
+  .topik-icon {
+    min-width: 120px;      /* Further adjustment for smaller screens */
+  }
+
+  .topik-icon i {
+    font-size: 45px;       /* Further decreased icon size */
+  }
+
+  .topik-icon img {
+    width: 60px;           /* Even smaller images */
+  }
+
+  .topik-icon p {
+    font-size: 14px;       /* Smaller font for better fit */
+  }
+}
+
+@media (max-width: 480px) {
+  .topik-hukum h2 {
+    font-size: 20px; /* Further smaller heading */
+  }
+
+  .topik-icons {
+    gap: 10px; /* Even smaller gap for the icons */
+  }
+
+  .topik-icon i {
+    font-size: 35px; /* Further reduced icon size */
+  }
+
+  .topik-icon img {
+    width: 50px; /* Smallest image size for mobile */
+  }
+}
+
+/* ====================== Features Lawyer Section ===================== */
+.features-lawyer-home {
+  padding: 50px 10%;
+   background: linear-gradient(180deg, #fefde9, #fff);
+  text-align: center;
+}
+
+.features-lawyer-home h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.features-grid-home {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.features-grid-home h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.feature-item-home {
+  background: #fefde9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid #B31312;
+  min-width: 250px;
+  flex: 1 1 30%;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.feature-item-home
+
+/* Efek Hover Ditambahkan di sini */
+.feature-item-home:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.feature-item-home h3 {
+  margin-bottom: 10px;
+  color: #B31312;
+}
+
+.feature-item-home p {
+  color: #666;
+}
+
+/* Style the icons */
+.icon-feature {
+  font-size: 50px; /* Adjusted icon size */
+  color: #B31312;
+  margin-bottom: 15px;
+}
+
+.icon-feature:hover {
+  color: #e52d27;
+}
+
+/* card konsisten*/
+.product-item .foto-advokat {
+  width: 160px !important;
+  height: 200px !important;
+  border-radius: 12px !important;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 12px;
+}
+
+
+.product-item h3 {
+  font-size: 18px;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.product-item p {
+  font-size: 14px;
+  margin: 0.25rem 0;
+  line-height: 1.3;
+}
+
+.btn-konsultasi {
+  margin-top: auto;
+  padding: 0.5rem 1rem;
+  background-color: #007f73;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-konsultasi:hover {
+  background-color: #005f56;
+}
+
+/* scroll */
+.product-scroll-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding: 1rem;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+}
+
+.product-scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.product-item {
+  width: 250px;
+  min-height: 420px; /* ✅ pastikan tinggi konsisten */
+  flex-shrink: 0;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  scroll-snap-align: start;
+}
+
+.product-scroll-wrapper.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.home-before-page{
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+/* Styling dasar untuk gambar wave */
+
+/* Container untuk gelombang */
+.gelombang {
+  position: relative;
+  width: 100%;
+  height: 100px; /* Sesuaikan tinggi sesuai gambar */
+  overflow: hidden;
+  background-color: transparent; /* Pastikan tidak menimpa latar */
+}
+
+/* Gelombang bawah di bagian HERO */
+.waveA {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: url("/assets/img/wave2.png") repeat-x;
+  background-size: contain;
+  animation: animateWave 30s linear infinite;
+  z-index: 1;
+  background-color: #fff;
+}
+
+/* Gelombang atas di bagian FOOTER */
+.waveB {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: url("/assets/img/wave2.png") repeat-x;
+  background-size: contain;
+  animation: animateWaveReverse 30s linear infinite;
+  transform: scaleY(-1); /* Membalik gelombang agar muncul dari atas */
+  z-index: 2;
+    background-color: #fff;
+}
+
+.waveA,
+.waveB {
+  height: 200px; /* Ubah dari 100% atau 100px ke 200px */
+  background-size: auto 200px; /* Pastikan ukuran gambar menyesuaikan tinggi baru */
+}
+
+
+/* Animasi gelombang berjalan normal */
+@keyframes animateWave {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+/* Animasi gelombang berjalan terbalik */
+@keyframes animateWaveReverse {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0;
+  }
+}
+
+
+
+
+/* @keyframes animate
+{
+  0%
+  {
+    background-position-x: 0;
+  }
+  100%
+  {
+    background-position-x: 1000px;
+  }
+
+}
+
+.wave-bottom {
+   animation: animate 30s linear infinite;
+}
+
+.wave {
+  width: 200%;
+  max-width: none;
+  height: auto;
+  display: block;
+  position: relative;
+  background-color: #000;
+  pointer-events: none;
+  user-select: none;
+  overflow: visible;
+  transform-origin: center bottom;
+}
+
+.wave-top {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+  transform: rotate(0deg); 
+  margin-bottom: -10px;
+}
+
+.header {
+  position: relative;       
+  z-index: 10;
+}
+
+.wave-top.absolute {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  transform: rotate(180deg);
+  z-index: 5;
+}
+
+
+.wave-above-footer {
+  position: relative;
+  margin-bottom: 0;
+  margin-top: -10px; 
+  transform: rotate(0deg);
+  z-index: 2;
+}
+
+.wave-above-footer.absolute {
+  position: absolute;
+  top: 0;    
+  left: 0;
+  width: 100%;
+  margin: 0;
+  transform: rotate(0deg);
+  z-index: 5;
+}
+
+.wave-bottom {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  margin-top: -5px;         
+  transform: rotate(180deg); 
+  z-index: 2;
+  animation: waveFloat 6s ease-in-out infinite;
+  pointer-events: none;
+  user-select: none;
+  overflow: visible;
+}
+
+
+@media (max-width: 768px) {
+  .wave {
+    animation-duration: 8s; 
+  }
+} */
+
+.info-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin: 6px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.info-icon {
+  color: #B31312;
+  font-size: 16px;
+}
+
+.info-bar-horizontal {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 4px; /* reduce space below info-bar */
+}
+
+.foto-advokat-container {
+  position: relative;
+  display: inline-block;
+  border-radius: 12px;    /* Sesuaikan sama border-radius foto */
+  overflow: hidden;       /* Penting agar anak elemen yang keluar dipotong */
+  width: 160px;
+  height: 200px;          /* Sesuai ukuran foto persegi panjang */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+
+.online-indicator {
+  position: absolute;
+  top: 4px;       /* Lebih kecil, lingkaran masuk ke dalam foto */
+  right: 4px;
+  width: 16px;
+  height: 16px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 6px #4CAF50;
+  pointer-events: none;
+  z-index: 10;    /* Pastikan di atas foto */
+}
+
+/* ======================= RESPONSIVE ======================= */
+@media (max-width: 1024px) {
+  .features-grid-home {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features-lawyer-home {
+    padding: 40px 5%;
+  }
+
+  .feature-item-home {
+    min-width: 80%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-lawyer-home h2 {
+    font-size: 1.8rem;
+  }
+
+  .features-grid-home {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-item-home {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+.slideshow-section {
+  margin: 40px auto;
+  width: 95%;
+  max-width: 1000px;
+}
+
+.slideshow-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 15px;
+  flex-wrap: wrap;
+}
+
+.slideshow-heading {
+  font-size: 26px;
+  font-weight: 800;
+  color: #102a43;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.slideshow-heading::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 5px;
+  background-color: #B31312;
+  margin-top: 5px;
+  border-radius: 3px;
+}
+
+.btn-selengkapnya {
+  background: linear-gradient(to right, #a8070a, #e11b1e) !important;
+  color: #fff !important;
+  padding: 10px 20px !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  border-radius: 999px !important;
+  text-decoration: none !important;
+  transition: background 0.3s ease !important;
+}
+
+.btn-selengkapnya:hover {
+  background: linear-gradient(to right, #e11b1e, #a8070a) !important;
+}
+
+.slideshow-wrapper {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.slideshow-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  position: relative;
+}
+
+.slide-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 10px 16px;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+.slide-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  letter-spacing: 0.3px;
+}
+
+.slideshow-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 7px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #B31312;
+  width: 12px;
+  height: 12px;
+}
+
+.rating-stars {
+  text-align: center;
+  margin: 10px 0;
+}

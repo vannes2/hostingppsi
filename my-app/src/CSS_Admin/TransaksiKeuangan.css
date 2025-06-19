@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ===================================================================
+   CSS HALAMAN KEUANGAN - V9 (PENYESUAIAN JARAK SECTION)
+   =================================================================== */
+
+/* --- Variabel Utama --- */
+:root {
+    --color-background: #1f2b38;
+    --color-surface-1: #2c3e50;
+    --color-surface-2: #34495e;
+    --color-accent-1: #f39c12;
+    --color-accent-2: #e67e22;
+    --color-text-primary: #ecf0f1;
+    --color-text-secondary: #a3b1c2;
+    --color-border: #3d566e;
+    --color-success: #27ae60;
+    --color-danger: #c0392b;
+    --color-info: #3498db;
+    --font-family: 'Poppins', sans-serif;
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --shadow-medium: 0 6px 18px rgba(0, 0, 0, 0.2);
+    --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+
+/* --- Struktur Halaman --- */
+.transaksi-keuangan-page {
+    width: 100%;
+}
+
+.page-header {
+    text-align: left;
+    margin-bottom: var(--spacing-lg);
+}
+
+.page-header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, var(--color-accent-1), var(--color-accent-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    margin-top: 0.5rem;
+}
+
+/* --- Kartu Statistik --- */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.stat-card {
+    background: var(--color-surface-2);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    border: 1px solid var(--color-border);
+    transition: var(--transition-smooth);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent-1);
+    box-shadow: var(--shadow-medium);
+}
+
+.stat-icon {
+    background: linear-gradient(45deg, var(--color-accent-1), var(--color-accent-2));
+    color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.stat-card-content h3 {
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-card-content p {
+    color: var(--color-text-primary);
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+
+/* --- Section & Chart --- */
+.section-pair {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.dashboard-section {
+    background-color: var(--color-surface-1);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    /* --- [PERUBAHAN] --- Jarak antar section ditambah agar lebih lega */
+    margin-bottom: 3rem; 
+    transition: var(--transition-smooth);
+}
+
+.dashboard-section:hover {
+    box-shadow: var(--shadow-medium);
+    border-color: #4a627a;
+}
+
+.chart-container {
+    height: 380px;
+    position: relative;
+    flex-grow: 1;
+}
+
+.section-header {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 1.5rem;
+    flex-shrink: 0;
+}
+
+.section-header h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+/* --- Filter Controls --- */
+.filter-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.filter-input {
+    flex-grow: 1;
+    min-width: 250px;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-surface-2);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-primary);
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    transition: var(--transition-smooth);
+}
+.filter-input:focus {
+    outline: none;
+    border-color: var(--color-accent-1);
+    box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.2);
+}
+
+.filter-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-select, .btn-secondary {
+    padding: 0.75rem 1.25rem;
+    background-color: var(--color-surface-2);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+.filter-select:hover, .btn-secondary:hover {
+    color: var(--color-text-primary);
+    border-color: #555;
+}
+
+/* --- Desain Tabel --- */
+.table-responsive {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: var(--color-surface-2);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table thead th {
+    background-color: rgba(0,0,0,0.2);
+    color: var(--color-text-primary);
+    font-weight: 600;
+    padding: 0.8rem 1.25rem;
+    text-align: left;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    border-bottom: 2px solid var(--color-accent-1);
+}
+
+.data-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+.data-table tbody tr:nth-child(even) { background-color: rgba(0,0,0,0.1); }
+.data-table tbody tr:hover { background-color: var(--color-surface-1); }
+
+.data-table tbody td {
+    color: var(--color-text-secondary);
+    padding: 0.9rem 1.25rem;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+.data-table tbody tr:hover td { color: var(--color-text-primary); }
+.data-table tbody tr:last-child td { border-bottom: none; }
+.no-data { text-align: center; color: var(--color-text-secondary); padding: 3rem 1rem; }
+
+/* --- Badge & Tombol Aksi --- */
+.status-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.status-badge.selesai { background-color: rgba(39, 174, 96, 0.2); color: var(--color-success); }
+
+.btn-action {
+    background: var(--color-info);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.1rem;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    text-align: center;
+}
+.btn-action:hover {
+    filter: brightness(115%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+.btn-action:disabled {
+    background-color: var(--color-surface-2);
+    color: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+    filter: none;
+    box-shadow: none;
+}
+canvas{
+    margin-bottom: 40px;
+}
+/* --- Responsive Design --- */
+@media (max-width: 1200px) {
+    .section-pair { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    .page-header { text-align: center; }
+    .page-header h1 { font-size: 2rem; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .filter-controls { flex-direction: column; align-items: stretch; }
+    .filter-group { flex-direction: column; width: 100%; }
+    .data-table thead { display: none; }
+    .data-table tbody, .data-table tr, .data-table td { display: block; width: 100%; }
+    .data-table tr { border-radius: var(--radius-md); margin-bottom: 1rem; border: 1px solid var(--color-border); }
+    .data-table td { display: flex; justify-content: space-between; align-items: center; padding: 0.8rem; border-bottom: 1px dashed var(--color-border); }
+    .data-table td:last-child { border-bottom: none; }
+    .data-table td::before { content: attr(data-label); font-weight: bold; color: var(--color-text-primary); margin-right: 1rem; }
+}
+
+/* --- Loading & Error States --- */
+.loading-state, .error-state {
+    display: grid;
+    place-items: center;
+    min-height: 50vh;
+    color: var(--color-text-secondary);
+    font-size: 1.2rem;
+}

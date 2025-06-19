@@ -1,0 +1,490 @@
+/* ======== DetailPengacara.css (Final Responsive Version) ======== */
+
+/* --- Base/Global Styling --- */
+.detail-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fefff0; /* Soft yellow background */
+    font-family: Arial, sans-serif;
+    color: #3b3b3b;
+    overflow-x: hidden;
+}
+
+/* Adjust top spacing to clear header (based on JSX <br> tags) */
+/* Consider managing this margin in HeaderAfter component or a global layout. */
+.detail-page .detail-container {
+    margin-top: 100px; /* Provides space below header */
+}
+
+
+/* ---------- Main Content Container ---------- */
+.detail-container {
+    flex: 1; /* Allows container to grow and push footer down */
+    max-width: 1000px;
+    width: 90%; /* Use percentage for initial flexibility */
+    margin: 100px auto 50px; /* Centered, with top/bottom margins */
+    background: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* ---------- Section Headings (e.g., "Detail Pengacara") ---------- */
+.detail-page .detail-container h2 {
+    color: #b31312; /* Red accent color */
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* --- Main Detail Card (Photo + Info) --- */
+.main-detail-card {
+    /* This wrapper helps if you need to add more cards horizontally later */
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between detail-card and additional-info-card */
+}
+
+.detail-card {
+    display: flex; /* Flexbox for photo and info side-by-side */
+    align-items: flex-start; /* Align items to the top */
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.detail-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* ---------- Lawyer Photo ---------- */
+.detail-photo-container {
+    flex-shrink: 0; /* Prevent photo container from shrinking */
+    margin-right: 35px; /* Space between photo and info */
+    text-align: center;
+}
+
+.detail-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* Crop image to fit without distortion */
+    border-radius: 50%; /* Makes the photo perfectly round */
+    border: 5px solid #f0f0f0; /* Prominent photo border */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* Photo shadow */
+    /* Removed the problematic margin-bottom: -300px; */
+}
+
+/* ---------- Lawyer Information Grid ---------- */
+.detail-info {
+    flex-grow: 1; /* Allow info section to take available space */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for info details */
+    gap: 15px 40px; /* Gap between rows and columns */
+    font-size: 1.08em; /* Slightly larger text for readability */
+}
+
+.detail-info p {
+    margin-bottom: 0;
+    display: flex; /* Make p a flex container for label and value */
+    align-items: center; /* Vertically align label and value */
+    justify-content: space-between; /* Pushes label left, value right */
+    word-break: break-word; /* Prevents long words from overflowing */
+    padding: 0.5rem 0; /* Vertical padding */
+    border-bottom: 1px solid #f0f0f0; /* Separator line for each info item */
+}
+
+.detail-info strong {
+    color: #555;
+    font-weight: 600;
+    min-width: 150px; /* Ensures labels have enough space for alignment */
+    display: inline-block;
+    flex-shrink: 0; /* Prevents label from shrinking */
+}
+
+.detail-info span {
+    color: #333;
+    flex-grow: 1; /* Allows value to take remaining space */
+    text-align: right; /* Aligns the value text to the right */
+}
+
+/* --- Additional Information Card --- */
+.additional-info-card {
+    margin-top: 30px; /* Space from the main detail card */
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: #fff5d6; /* Light yellow background for this card */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+}
+
+.additional-info-card h3 {
+    margin-bottom: 30px;
+    color: #b31312;
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    border-bottom: 2px solid #f0f0f0; /* Separator line below heading */
+    padding-bottom: 15px;
+}
+
+.additional-info-content {
+    display: flex;
+    flex-direction: row; /* Resume and social media side-by-side */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center items horizontally */
+    align-items: flex-start; /* Align items to the top */
+    gap: 50px; /* Space between resume and social media sections */
+    width: 100%;
+    max-width: 800px;
+}
+
+.resume-section {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.info-item {
+    margin-bottom: 0;
+    font-size: 1.2em;
+}
+
+.info-link {
+    display: inline-flex; /* Align icon and text */
+    align-items: center;
+    color: #007bff; /* Standard blue link color */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease-in-out;
+}
+
+.info-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.icon-margin {
+    margin-right: 12px;
+    font-size: 1.6em;
+}
+
+/* --- Social Media Links --- */
+.social-media-links {
+    display: flex;
+    justify-content: center;
+    gap: 35px; /* Space between social icons */
+    align-items: center;
+}
+
+.social-icon-link {
+    color: #555;
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.social-icon-link .svg-inline--fa { /* Target Font Awesome icons */
+    font-size: 2.5em;
+}
+
+.social-icon-link:hover {
+    transform: scale(1.2); /* Zoom effect on hover */
+}
+
+/* Specific social media icon colors */
+.linkedin-color { color: #0A66C2; }
+.linkedin-color:hover { color: #0e76a8; }
+.instagram-color { color: #E4405F; }
+.instagram-color:hover { color: #c32aa3; }
+.twitter-color { color: #1DA1F2; }
+.twitter-color:hover { color: #1a8cd8; }
+
+/* ---------- Footer & Separator ---------- */
+.footer-separator {
+    width: 100%;
+    height: 8px;
+    background-color: #b31312;
+    margin-top: 50px; /* Add some space above the separator */
+}
+
+footer {
+    position: relative;
+    z-index: 1;
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+
+/* ================= RESPONSIVE MEDIA QUERIES ================= */
+
+/* Untuk layar dengan lebar maksimal 1024px (Tablet & Laptop Kecil) */
+@media (max-width: 1024px) {
+    .detail-container {
+        max-width: 90%;
+        margin: 80px auto 40px;
+        padding: 25px;
+    }
+
+    .detail-page .detail-container h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .detail-card {
+        flex-direction: column; /* Stack photo and info vertically */
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .detail-photo-container {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 25px; /* Add bottom margin after photo */
+    }
+
+    .detail-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .detail-info {
+        grid-template-columns: 1fr; /* Single column layout for info details */
+        gap: 10px;
+        font-size: 1em;
+        width: 100%;
+    }
+
+    .detail-info p {
+        justify-content: space-between; /* Keep label left, value right */
+        border-bottom: 1px solid #f0f0f0;
+        padding: 5px 0;
+    }
+
+    .detail-info strong {
+        min-width: 120px; /* Adjust min-width for tablet labels */
+    }
+
+    .detail-info span {
+        text-align: right; /* Keep value aligned right */
+    }
+
+    .additional-info-card {
+        margin-top: 25px;
+        padding: 25px;
+    }
+
+    .additional-info-card h3 {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+        padding-bottom: 12px;
+    }
+
+    .additional-info-content {
+        gap: 40px;
+    }
+
+    .info-item {
+        font-size: 1.1em;
+    }
+
+    .icon-margin {
+        font-size: 1.4em;
+        margin-right: 10px;
+    }
+
+    .social-media-links {
+        gap: 30px;
+    }
+
+    .social-icon-link .svg-inline--fa {
+        font-size: 2.2em;
+    }
+}
+
+/* Untuk layar dengan lebar maksimal 768px (Tablet Sedang / Ponsel Lanskap) */
+@media (max-width: 768px) {
+    .detail-container {
+        width: 95%;
+        margin: 60px auto 30px;
+        padding: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .detail-page .detail-container h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .detail-card {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .detail-photo-container {
+        margin-bottom: 20px;
+    }
+
+    .detail-photo {
+        width: 160px;
+        height: 160px;
+        border-width: 3px;
+    }
+
+    .detail-info {
+        font-size: 0.95em;
+        gap: 8px;
+    }
+
+    .detail-info p {
+        justify-content: space-between; /* Keep label left, value right */
+        padding: 4px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .detail-info strong {
+        min-width: 100px; /* Adjust min-width for smaller tablets/phones */
+    }
+
+    .detail-info span {
+        text-align: right; /* Keep value aligned right */
+    }
+
+    .additional-info-card {
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    .additional-info-card h3 {
+        font-size: 1.6em;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+
+    .additional-info-content {
+        gap: 30px;
+        flex-direction: column; /* Stack resume and social media vertically */
+        align-items: center;
+    }
+
+    .info-item {
+        font-size: 1em;
+    }
+
+    .icon-margin {
+        font-size: 1.2em;
+        margin-right: 8px;
+    }
+
+    .social-media-links {
+        gap: 25px;
+    }
+
+    .social-icon-link .svg-inline--fa {
+        font-size: 2em;
+    }
+}
+
+/* Untuk layar dengan lebar maksimal 480px (Ponsel Kecil) */
+@media (max-width: 480px) {
+    .detail-container {
+        width: 98%;
+        margin: 40px auto 20px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: none; /* Simplify for mobile */
+    }
+
+    .detail-page .detail-container h2 {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .detail-card {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: none; /* Simplify for mobile */
+        box-shadow: none; /* Simplify for mobile */
+    }
+
+    .detail-photo-container {
+        margin-bottom: 15px;
+    }
+
+    .detail-photo {
+        width: 120px;
+        height: 120px;
+        border-width: 2px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .detail-info {
+        font-size: 0.9em;
+        gap: 5px;
+    }
+
+    .detail-info p {
+        flex-direction: row; /* Keep label and value on same row */
+        justify-content: space-between; /* Rata kiri-kanan */
+        align-items: center;
+        padding: 3px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .detail-info strong {
+        min-width: unset; /* Let flex-basis control width */
+        flex-basis: 40%; /* Allocate 40% width for the label */
+        text-align: left; /* Ensure label text is left-aligned */
+        margin-right: 0; /* Remove any lingering margin */
+        margin-bottom: 0; /* Remove any lingering margin */
+    }
+
+    .detail-info span {
+        flex-basis: 55%; /* Allocate 55% width for the value */
+        text-align: right; /* Keep value aligned right */
+    }
+
+    .additional-info-card {
+        margin-top: 15px;
+        padding: 15px;
+        border: none;
+        box-shadow: none;
+        background-color: transparent; /* Remove specific background */
+    }
+
+    .additional-info-card h3 {
+        font-size: 1.4em;
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .additional-info-content {
+        gap: 20px;
+        flex-direction: column; /* Keep stacked vertically */
+    }
+
+    .info-item {
+        font-size: 0.95em;
+    }
+
+    .icon-margin {
+        font-size: 1em;
+        margin-right: 5px;
+    }
+
+    .social-media-links {
+        gap: 20px;
+    }
+
+    .social-icon-link .svg-inline--fa {
+        font-size: 1.8em;
+    }
+}

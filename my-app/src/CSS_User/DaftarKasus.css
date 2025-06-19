@@ -1,0 +1,292 @@
+/* Styling Umum Halaman Daftar Kasus */
+.daftar-kasus-page {
+    background-color: #fefff0;
+    padding-bottom: 2rem;
+    min-height: 100vh;
+}
+
+.daftar-kasus-page .daftar-kasus-wrapper {
+    padding: 2.5rem;
+    background-color: #fefff0;
+    border-radius: 12px;
+    margin: 3rem auto;
+    max-width: 1100px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+}
+
+.daftar-kasus-page .konten-kasus-layout {
+    display: flex;
+    gap: 2.5rem;
+}
+
+
+/* Styling Judul dan Tombol Header */
+.daftar-kasus-page .title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.daftar-kasus-page .title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #B31312;
+    text-align: center;
+}
+
+.daftar-kasus-page .btn-ajukan-header {
+    background-color: #B31312;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(179, 19, 18, 0.2);
+    transition: 0.3s ease;
+}
+
+.daftar-kasus-page .btn-ajukan-header:hover {
+    background-color: #fff;
+    color: #B31312;
+    border: 2px solid #B31312;
+}
+
+.daftar-kasus-page .garis-bawah-title {
+    height: 3px;
+    background-color: #B31312;
+    margin: 1rem 0 2rem 0;
+    border-radius: 3px;
+    width: 100%;
+}
+
+/* Styling Tab Navigasi */
+.daftar-kasus-page .tab-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.daftar-kasus-page .tab {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1.5px solid #ccc;
+    background-color: #fff;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.daftar-kasus-page .tab.active {
+    background-color: #B31312;
+    color: #fff;
+    border-color: #B31312;
+}
+
+.daftar-kasus-page .tab:hover {
+    background-color: #ffc6c6;
+    color: #B31312;
+}
+
+/* Styling Tabel Kasus (Default untuk Desktop) */
+.daftar-kasus-page .tabel-kasus-wrapper {
+    overflow-x: auto;
+    flex-grow: 1;
+}
+
+.daftar-kasus-page .tabel-kasus {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.daftar-kasus-page .tabel-kasus th,
+.daftar-kasus-page .tabel-kasus td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.daftar-kasus-page .tabel-kasus th {
+    background-color: #fefff0;
+    color: #3b3b3b;
+    font-weight: 600;
+}
+
+.daftar-kasus-page .tabel-kasus tr:hover {
+    background-color: #fff6f6;
+}
+
+/* Styling Card List (Defaultnya Disembunyikan di Desktop) */
+.daftar-kasus-page .card-list-wrapper {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    flex-grow: 1;
+}
+
+.daftar-kasus-page .kasus-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.daftar-kasus-page .kasus-card:hover {
+    background-color: #fff6f6;
+    border-color: #ffc6c6;
+}
+
+.daftar-kasus-page .card-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed #eee;
+}
+
+.daftar-kasus-page .card-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.daftar-kasus-page .card-label {
+    font-weight: 600;
+    color: #3b3b3b;
+    font-size: 0.95rem;
+}
+
+.daftar-kasus-page .card-value {
+    color: #666;
+    font-size: 0.95rem;
+    text-align: right;
+}
+
+/* Styling Empty State */
+.daftar-kasus-page .empty-state {
+    text-align: center;
+    padding: 3rem;
+    background-color: #fff;
+    border: 2px dashed #ccc;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.daftar-kasus-page .empty-icon { width: 100px; opacity: 0.4; }
+.daftar-kasus-page .empty-title { font-size: 1.8rem; margin-top: 1rem; color: #3b3b3b; font-weight: bold; }
+.daftar-kasus-page .empty-desc { color: #666; margin-bottom: 1rem; }
+.daftar-kasus-page .ajukan-btn-static { background-color: #B31312; color: #fff; padding: 10px 22px; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; margin-top: 1rem; }
+.daftar-kasus-page .ajukan-btn-static:hover { background-color: #fff; color: #B31312; border: 2px solid #B31312; }
+
+/* Styling Informasi Kasus Samping */
+.daftar-kasus-page .informasi-kasus-samping {
+    margin-top: 0;
+    background-color: #fff;
+    border-left: 5px solid #B31312;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    align-self: flex-start; /* Agar tingginya sesuai konten */
+}
+
+.daftar-kasus-page .informasi-kasus-samping h3 { color: #B31312; margin-bottom: 1rem; font-size: 1.4rem; }
+.daftar-kasus-page .informasi-kasus-samping li { color: #666; margin-bottom: 0.5rem; line-height: 1.6; font-size: 0.95rem; }
+
+/* --- Media Queries --- */
+@media (max-width: 992px) {
+    .daftar-kasus-page .daftar-kasus-wrapper { padding: 2rem; margin: 2rem auto; }
+    .daftar-kasus-page .title { font-size: 2rem; }
+    .daftar-kasus-page .tab-container { gap: 1rem; }
+    .daftar-kasus-page .tab { padding: 8px 15px; font-size: 0.95rem; }
+    .daftar-kasus-page .konten-kasus-layout { flex-direction: column; gap: 2.5rem; }
+    .daftar-kasus-page .informasi-kasus-samping { width: 100%; order: -1; margin-top: 0; }
+    .daftar-kasus-page .tabel-kasus-wrapper { display: none; }
+    .daftar-kasus-page .card-list-wrapper { display: flex; }
+    .daftar-kasus-page .empty-state { padding: 2rem; }
+    .daftar-kasus-page .empty-title { font-size: 1.6rem; }
+    .daftar-kasus-page .empty-desc { font-size: 0.9rem; }
+}
+
+@media (max-width: 768px) {
+    .daftar-kasus-page .daftar-kasus-wrapper { padding: 1.5rem; margin: 1.5rem auto; }
+    .daftar-kasus-page .title { font-size: 1.8rem; }
+    .daftar-kasus-page .btn-ajukan-header { padding: 10px 20px; font-size: 0.9rem; }
+    .daftar-kasus-page .tab-container { flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+    .daftar-kasus-page .tab { padding: 8px 12px; font-size: 0.85rem; }
+    .daftar-kasus-page .kasus-card { padding: 1.2rem; gap: 0.6rem; }
+    .daftar-kasus-page .card-label, .daftar-kasus-page .card-value { font-size: 0.9rem; }
+    .daftar-kasus-page .empty-icon { width: 80px; }
+    .daftar-kasus-page .empty-title { font-size: 1.4rem; }
+    .daftar-kasus-page .empty-desc { font-size: 0.85rem; }
+    .daftar-kasus-page .ajukan-btn-static { padding: 8px 18px; font-size: 0.9rem; }
+    .daftar-kasus-page .informasi-kasus-samping h3 { font-size: 1.2rem; }
+    .daftar-kasus-page .informasi-kasus-samping li { font-size: 0.85rem; }
+}
+
+@media (max-width: 480px) {
+    .daftar-kasus-page .daftar-kasus-wrapper { padding: 1rem; margin: 1rem auto; }
+    .daftar-kasus-page .title { font-size: 1.5rem; }
+    .daftar-kasus-page .btn-ajukan-header { width: 100%; margin-top: 1rem; }
+    .daftar-kasus-page .tab-container { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+    .daftar-kasus-page .tab { padding: 10px 15px; border-radius: 8px; }
+    .daftar-kasus-page .kasus-card { padding: 1rem; gap: 0.5rem; }
+    .daftar-kasus-page .card-label, .daftar-kasus-page .card-value { font-size: 0.85rem; }
+    .daftar-kasus-page .empty-state { padding: 1.5rem; }
+    .daftar-kasus-page .empty-icon { width: 60px; }
+    .daftar-kasus-page .empty-title { font-size: 1.2rem; }
+    .daftar-kasus-page .empty-desc { font-size: 0.8rem; }
+    .daftar-kasus-page .ajukan-btn-static { width: 100%; padding: 10px 0; font-size: 1rem; }
+    .daftar-kasus-page .informasi-kasus-samping { padding: 1rem; }
+    .daftar-kasus-page .informasi-kasus-samping h3 { font-size: 1.1rem; text-align: center; }
+    .daftar-kasus-page .informasi-kasus-samping li { font-size: 0.8rem; }
+}
+
+/* --- STYLING BARU UNTUK TOMBOL ULASAN --- */
+/* Styling untuk Tombol Beri Ulasan */
+.daftar-kasus-page .btn-ulasan {
+    background-color: #B31312; /* DIUBAH: Warna merah primer */
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(179, 19, 18, 0.2); /* DIUBAH: Shadow merah */
+}
+
+.daftar-kasus-page .btn-ulasan:hover {
+    background-color: #930f0e; /* DIUBAH: Warna merah lebih gelap saat hover */
+    box-shadow: 0 4px 10px rgba(179, 19, 18, 0.3);
+}
+
+.daftar-kasus-page .reviewed-text,
+.daftar-kasus-page table span.reviewed-text {
+    display: inline-block;
+    background-color: #e6f4ea; /* Warna hijau pucat */
+    color: #155724; /* Warna hijau tua untuk teks */
+    padding: 6px 12px;
+    border-radius: 15px; /* Bentuk pil */
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.daftar-kasus-page .card-action {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    text-align: right; /* Meletakkan tombol/status di sebelah kanan */
+}
